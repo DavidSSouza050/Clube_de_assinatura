@@ -1,0 +1,46 @@
+.hero{
+  height: auto;
+  min-height: 80rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding-left: 10rem;
+  
+ 
+ 
+  & h1{
+    width: 41rem;
+    text-align: center;
+    margin-top: 20rem;
+    animation: bookIn 2s 600ms ease both;
+    opacity: 0;
+  }
+
+  & p{
+    margin-top: 2rem;
+    width: 35rem;
+    opacity: 0.6;
+    text-align: center;
+    font: var(--bb-lg);
+    color: var(--txt-body);
+    opacity: 0;
+    animation: bookIn 2s 1.5s ease both;
+  }
+
+  & img{
+    position: absolute;
+    top: -5rem;
+    left: -50rem;
+    z-index: -1;
+    animation: bookIn 2s 600ms ease both;
+    opacity: 0;
+  }
+
+}
+
+@keyframes bookIn{
+  to{
+    opacity: 1;
+  }
+}
