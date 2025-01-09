@@ -6,7 +6,7 @@
   flex-direction: column;
   position: relative;
   padding-left: 3rem;
-
+  
   & h1{
     width: 41rem;
     text-align: center;
@@ -18,10 +18,9 @@
   & p{
     margin-top: 2rem;
     width: 35rem;
-    opacity: 0.6;
     text-align: center;
     font: var(--bb-lg);
-    color: var(--txt-body);
+    color: var(--txt-label);
     opacity: 0;
     animation: bookIn 2s 1.5s ease both;
   }

@@ -1,5 +1,5 @@
 .text{
-  height: 12.5rem;
+  height: 10rem;
   margin-top: 10rem;
   position: relative;
 
@@ -39,7 +39,7 @@
     height: 5.5rem;
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -2rem;
     rotate: -20deg;
     transition: scale 200ms ease 0ms;
     scale: 0;
