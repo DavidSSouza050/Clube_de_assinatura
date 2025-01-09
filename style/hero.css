@@ -1,18 +1,16 @@
 .hero{
   height: auto;
-  min-height: 80rem;
+  min-height: 50rem;
   display: flex;
   align-items: center;
   flex-direction: column;
   position: relative;
-  padding-left: 10rem;
-  
- 
- 
+  padding-left: 3rem;
+
   & h1{
     width: 41rem;
     text-align: center;
-    margin-top: 20rem;
+    margin-top: 13rem;
     animation: bookIn 2s 600ms ease both;
     opacity: 0;
   }
@@ -30,14 +28,20 @@
 
   & img{
     position: absolute;
-    top: -5rem;
-    left: -50rem;
+    width: 90rem;
+    height: 60rem;
+    top: -10rem;
+    left: -10rem;
     z-index: -1;
     animation: bookIn 2s 600ms ease both;
+    
     opacity: 0;
   }
 
 }
+
+
+
 
 @keyframes bookIn{
   to{
