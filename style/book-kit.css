@@ -34,51 +34,124 @@ section.book-kit{
   & .book-kit-imgs{
     width: inherit;
     height: auto;
-    min-height: 50rem;
-    margin-top: 13.875rem;
+    min-height: 60rem;
+    margin-top: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    background: rgb(149,71,165);
+    background: radial-gradient(circle, rgba(149,71,165,0.36318277310924374) 0%, rgba(4,7,15,0) 66%);
 
-    & > img{
-      position: absolute;
-    }
-
-    & #book{
+    & .book-kit-wrapper{
       width: 29.188rem;
-      height: auto;
-      z-index: 7;
+      height: 40rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      
+
+      & > img{
+        position: absolute;
+      }
+
+      & > span{
+        position: absolute;
+        font: var(--bb-md);
+        color: var(--txt-label);
+      }
+
+      & #book{
+        width: 29.188rem;
+        height: auto;
+        z-index: 10;
+        
+      }
+
+      & #bookmark-yellow{
+        width: 12.75rem;
+        height: auto;
+        z-index: 9;
+        
+        right: -28%;
+        rotate: 10deg;
+        top: -15%;  
+
+      } 
+
+      & #bookmark-purple{
+        width: 12.75rem;
+        height: auto;
+        z-index: 8;
+
+        right: -15.8rem;
+        top: 1rem;
+        rotate: 21deg;
+      }
+
+      & #pin{
+        width: 13.875rem;
+        height: auto;
+        z-index: 7;
+
+        left: -9rem;
+        bottom: -3.5rem;
+      }
+
+      & #arrow-left{
+        z-index: 6;
+
+        left: -9rem;
+        top: -0.6rem;
+      }
+
+      & #arrow-up{
+        z-index: 5;
+
+        left: -11.3rem;
+        bottom: 10rem;
+      }
+
+      & #arrow-down{
+        z-index: 4;
+
+        right: -12rem;
+        bottom: -3.5rem;
+      }
+
+      & #txt-1{
+        z-index: 3;
+        
+        top: -2.7rem;
+        left: -13rem;
+      }
+
+      & #txt-2{
+        z-index: 2;
+
+        left: -11.5rem;
+        bottom: 19rem;
+      }
+
+      & #txt-3{
+        z-index: 1;
+
+        right: -7.5rem;
+        bottom: -5.5rem;
+      }
+
     }
 
-    & #bookmark-yellow{
-      width: 10.75rem;
-      height: auto;
-      z-index: 6;
-    } 
+    
 
-    & #bookmark-purple{
-      width: 10.75rem;
-      height: auto;
-      z-index: 5;
-    }
+  }
+}
 
-    & #pin{
-      width: 13.875rem;
-      height: auto;
-      z-index: 4;
-    }
 
-    & #arrow-left{
-      z-index: 3;
-    }
+@keyframes openKit{
 
-    & #arrow-up{
-      z-index: 2;
-    }
-
-    & #arrow-down{
-      z-index: 1;
-    }
+  to{
+    transform: translateX(-28%), rotate(10deg), translateY(-15%);
   }
 }
