@@ -3,43 +3,10 @@ header{
   align-items: center;
   justify-content: space-between;
   padding-top: 3.5rem;
-  & button{
+
+  & .btn{
     width: 89px;
     height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.5rem;
-    border: none;
-    font: var(--btt);
-    color: var(--txt-title);
-    background: var(--pink-dark);
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-
-    &:hover::before{
-      scale: 1.9;
-      
-    }
-
-    &::before{
-      content: "";
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      opacity: 0.2;
-      position: absolute;
-
-      background: var(--pink-light);
-
-      top: 1;
-      left: 1;
-      scale: 0;
-      transition: scale 500ms;
-
-    }
-
     
   }
   
