@@ -2,3 +2,27 @@
   max-width: 70rem;
   margin-inline: auto; 
 }
+
+
+.only-mobile{
+  display: none;
+}
+.only-descktop{
+  display: block;
+}
+
+@media (width <= 27em) {
+
+  .container{
+    width: 100%;
+  }
+  
+  .only-mobile{
+    display: block;
+  }
+
+  .only-descktop{
+    display: none;
+  }
+}
+

@@ -1,5 +1,6 @@
 section.signatures{
-  height: 50rem;
+  height: 80rem;
+  
   background: var(--shape-base);
   background: radial-gradient(circle, var(--shape-base) 0%, rgba(4,7,15,0) 66%),  url(../assets/images/pricing-background.png);
   
@@ -11,8 +12,6 @@ section.signatures{
   justify-content: center;
   flex-direction: column;
 
-  padding-top: 5.813rem;
-
   position: relative;
 
   & h2.signatur-title{
@@ -22,7 +21,7 @@ section.signatures{
     position: absolute;
     top: -15rem;
   }
-
+  
   & .card{
     width: 19.5rem;
     height: 28rem;
@@ -129,12 +128,16 @@ section.signatures{
         background-color: var(--shape-hover);
         box-shadow: 0px 0px 35px var(--shape-hover);
         transform: translateY(-1rem);
+        
       }
     }
 
     &[data-month]{
       z-index: 2;
-      transform: translateX(-19.5rem) rotate(-8deg) translateY(3.5rem);
+      /* transform: translateX(-19.5rem) rotate(-8deg) translateY(3.5rem); */
+
+      animation: cardFan2 ease both;
+      animation-timeline: view(60% 10px);
 
       & img[src*="pink"]:nth-child(1){
         width: 1.625rem;
@@ -160,10 +163,12 @@ section.signatures{
 
         
       &:hover{
-        z-index: 3;
+        z-index: 4;
         background-color: var(--shape-hover);
         box-shadow: 0px 0px 35px var(--shape-hover);
-        transform: translateX(-19.5rem) rotate(-8deg) translateY(2.5rem);
+        scale: 1.01;
+
+        transform: translateX(-19.5rem)  rotate(-8deg) translateY(2.5rem);
         
         & img[src*="pink"]:nth-child(1){
           transform: rotate(-10deg);
@@ -178,8 +183,11 @@ section.signatures{
       z-index: 1;
 
       /* transform: translateX(20rem) rotate(8deg) translateY(3.5rem);  */
-      animation: cardFan1 500ms ease  1 forwards;
+      
+      animation: cardFan1 ease both;
+      animation-timeline: view(60% 10px);
 
+      
       & ul{
         margin-top: 4rem;
       }
@@ -206,7 +214,7 @@ section.signatures{
         z-index: 3;
         background-color: var(--shape-hover);
         box-shadow: 0px 0px 35px var(--shape-hover);
-
+        scale: 1.01;
         transform: translateX(20rem) rotate(8deg) translateY(2.5rem);
 
       
@@ -228,6 +236,81 @@ section.signatures{
     }
 
   }
+
+  @media (width <= 27em) {
+    width: 100%;
+    height: 40rem;
+
+    & h2.signatur-title{
+      font: 700 1.5rem var(--ff-base);
+      text-align: center; 
+      margin-top: 8.438rem;
+      position: absolute;
+      top: -15rem;
+    }
+  
+    & .card-wrapper{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      white-space: nowrap;
+      gap: 1rem;
+
+      padding: 0;
+      margin: 0;
+      overflow-x: scroll;
+
+      & .card{
+        
+        position: relative;
+        display: inline-block;
+        flex: 0 0 auto; 
+
+        &[data-month]{
+          animation: none;
+          transform: none;
+          margin-left: 3rem;
+
+          &:hover{
+            scale: 1;
+            transform: none;
+          }
+        }
+
+        &[data-semi-annual]{
+          animation: none;
+          transform: none;
+          background-color: var(--shape-base);
+
+          &:hover{
+            scale: 1;
+            transform: none;
+            background-color: var(--shape-hover);
+          }
+          
+          &:focus{
+            background: none;
+          }
+
+        }
+
+        &[data-annual]{
+          animation: none;
+          transform: none;
+          margin-right: 3rem;
+          &:hover{
+            scale: 1;
+            transform: none;
+          }
+        }
+
+        &:hover{
+          scale: none;
+          transform: none;
+        }
+      }
+    }
+  }
   
 }
 
@@ -237,5 +320,15 @@ section.signatures{
   }
   to {
     transform: translateX(20rem) rotate(8deg) translateY(3.5rem); 
+  }
+}
+
+
+@keyframes cardFan2 {
+  from{
+    transform: translateX(0rem) rotate(0deg) translateY(0rem); 
+  }
+  to {
+    transform: translateX(-20rem) rotate(-8deg) translateY(3.5rem);
   }
 }

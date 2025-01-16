@@ -1,15 +1,15 @@
 .text{
   height: 10rem;
-  margin-top: 10rem;
+  margin-top: 5rem;
   position: relative;
 
   & p{
-    font:  1.8rem/2 var(--ff-base);
+    font:  1.8rem/200% var(--ff-base);
     color: var(--txt-body);
     text-align: center;
 
-    & strong{
-      opacity: 0.5;
+    & span{
+      opacity: 0.5; 
     }
   }
   
@@ -52,10 +52,10 @@
       scale: 1;
     }
 
-    & strong:nth-child(1){
+    & span:nth-child(1){
       animation: appear 200ms ease both;
 
-      & span{
+      & strong{
         color: var(--blue-light);
       }
     }
@@ -66,10 +66,10 @@
       transition: scale 200ms ease 800ms, rotate 200ms ease;
     }
 
-    & strong:nth-child(2){
+    & span:nth-child(2){
       animation: appear 200ms 800ms ease both;
 
-      & span{
+      & strong{
         transition: color 200ms ease 800ms;
         color: var(--blue-light);
       }
@@ -81,10 +81,10 @@
       transition: scale 200ms ease 1500ms, rotate 200ms ease;
     }
 
-    & strong:nth-child(3){
+    & span:nth-child(3){
       animation: appear 200ms 1500ms ease both;
 
-      & span{
+      & strong{
         transition: color 200ms ease 1500ms;
         color: var(--blue-light);
       }
@@ -109,6 +109,56 @@
     rotate: 5deg;
     transition: rotate 500ms ease;
   }
+
+  @media (width <= 27em) {
+    width: 100%;
+    padding: 1.25rem;
+    margin-top: 3.75rem;
+
+    & p{
+      font: 1rem/140% var(--ff-base);
+      color: var(--txt-body);
+    }
+
+    & > img[src*="spellbook"]{
+      width: 2.5rem;
+      height: 2.5rem;
+      position: absolute;
+      scale: 1;
+      top: -2rem;
+      right: 5rem;
+    }
+  
+    & > img[src*="planchette"]{
+      width: 2rem;
+      height: 2rem;
+      position: absolute;
+      rotate: 100deg;
+      scale: 1;
+      left: 1.5rem;
+      bottom: 1.5rem;
+      rotate: -20deg;
+    }
+  
+    & > img[src*="ball"]{
+      width: 2.5rem;
+      height: 2.5rem;
+      position: absolute;
+      scale: 1;
+      right: 2rem;
+      bottom: 0.5rem;
+      rotate: 20deg;
+    }
+
+   
+    & img[src*="mystery"]:hover{
+      scale: 1;
+      rotate: 20deg;
+      transition: none;
+    }
+
+  }
+
 }
 
 @keyframes appear {

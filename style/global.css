@@ -67,6 +67,8 @@ h2{
 
 a{
   text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 img{
@@ -76,4 +78,11 @@ img{
 
 ul[role='list']{
   list-style: none;
+}
+
+
+@media (width <= 27em) {
+  body{
+    overflow-x: hidden;
+  }
 }

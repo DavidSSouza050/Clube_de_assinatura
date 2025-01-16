@@ -1,16 +1,39 @@
-.hero{
-  height: auto;
-  min-height: 50rem;
+section.hero{
+  background-image: url(../assets/images/hero-background.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+
+  width: 100%;
+  height: 60rem;
   display: flex;
   align-items: center;
   flex-direction: column;
-  position: relative;
-  padding-left: 3rem;
   
+  padding-left: 3rem;
+  opacity: 0;
+
+  animation: bookIn 2s 600ms ease both;
+
+  & header{
+    display: flex;
+    max-width: 70em;
+    width: inherit;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3.5rem;
+  
+    & .btn{
+      width: 89px;
+      height: 40px;    
+    }
+
+  }
+
   & h1{
     width: 41rem;
     text-align: center;
-    margin-top: 13rem;
+    margin-top: 7rem;
     animation: bookIn 2s 600ms ease both;
     opacity: 0;
   }
@@ -25,18 +48,44 @@
     animation: bookIn 2s 1.5s ease both;
   }
 
-  & img{
-    position: absolute;
-    width: 90rem;
-    height: 60rem;
-    top: -10rem;
-    left: -10rem;
-    z-index: -1;
-    animation: bookIn 2s 600ms ease both;
+  
+  @media (width <= 27em) {
     
-    opacity: 0;
-  }
+    position: relative;
+    display: flex;
+    height: 50rem;
+    padding: 0;
+    padding-inline: 1.25rem;
 
+    & img[src*="hero"]{
+      position: absolute;
+      width: 100%;
+      height: 40rem;      
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    & h1{
+      width: 100%;
+      font: var(--tt-sm);
+      margin-top: 3rem;
+
+    }
+
+    & p{
+      width: 100%;
+      font: 0.875rem/140% var(--ff-base);
+    }
+
+    & header{
+      width: 100%;
+      margin-inline: auto;
+      padding-top: 1.25rem;
+      padding-inline: 1.25rem;
+    }
+
+
+  }
 }
 
 
